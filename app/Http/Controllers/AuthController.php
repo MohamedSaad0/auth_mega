@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Requests\RegisterRequest;
 use App\Http\Controllers\AuthController;
+use App\Observers\AuthObserver;
 
 
 
@@ -48,7 +49,7 @@ class AuthController extends Controller
 
 
     // return response($response,201);
-    return redirect()->route('/home');
+    return redirect()->route('home');
     // return view('user.home');
     }
 

@@ -33,5 +33,4 @@ Route::get('/home', function(){
 
 Route::group(['middleware' => ['auth:sanctum']], function(){
     Route::post('/logout', [AuthController::class, 'logout']);
-
 });
