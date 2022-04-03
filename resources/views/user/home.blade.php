@@ -7,6 +7,6 @@
     <title>Auth|Home</title>
 </head>
 <body>
-    
+    HOHOHO
 </body>
 </html>

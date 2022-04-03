@@ -25,6 +25,9 @@ Route::post('/register', [AuthController::class, 'register']);
 // user login
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/login', [AuthController::class, 'logView']);
+Route::get('/home', function(){
+    return view('user.home');
+})->name('home');
 
 // Protected Routes
 
