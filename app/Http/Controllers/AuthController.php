@@ -37,6 +37,8 @@ class AuthController extends Controller
         'email' => $request->email,
         'password' => bcrypt($request->password)
     ]);
+    // settin create uers as admins
+    $user->attachRole('admin');
 
     $token = $user->createToken('myAppToken')->plainTextToken;
 
@@ -44,13 +46,8 @@ class AuthController extends Controller
         'user' => $user,
         'token' => $token
     ];
-
-    // return redirect('/home')->with('message', 'Successfully created Recipe!');
-
-
     // return response($response,201);
     return redirect()->route('home');
-    // return view('user.home');
     }
 
     // user login
